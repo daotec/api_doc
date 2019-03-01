@@ -4,7 +4,8 @@ import json
 import hmac
 import hashlib
 import requests
-import test_api_key_x
+import pathmagic
+from tests import test_api_key_x
 
 
 def get_api_key():
@@ -15,8 +16,8 @@ def get_api_key():
 
 def request(api, method, params, secret_key):
     url = "https://www.dao-tec.com/api/v1/{}".format(api)
+    # url = "http://127.0.0.1:8000/api/v1/{}".format(api)
     headers = {'contentType': 'application/x-www-form-urlencoded'}
-    params['secret_key'] = secret_key
     content = json.dumps(params)
     sig = hmac.new(secret_key.encode("utf8"), msg=content.encode("utf8"),
                    digestmod=hashlib.sha256).hexdigest()
