@@ -25,7 +25,7 @@ URL `https://www.dao-tec.com/api/v1/exchanges`	访问频率 20次/2秒
 
 ```
 # Request
-GET http://127.0.0.1:8000/api/v1/exchanges?exchange_type=spot
+GET https://www.dao-tec.com/api/v1/exchanges?exchange_type=spot
 # Response
 {
     "status": 1, 
@@ -59,7 +59,7 @@ URL `https://www.dao-tec.com/api/v1/symbols`	访问频率 20次/2秒
 
 ```
 # Request
-GET http://www.dao-tec.com/api/v1/symbols?exchange=okex
+GET https://www.dao-tec.com/api/v1/symbols?exchange=okex
 # Response
 {
     "status": 1, 
